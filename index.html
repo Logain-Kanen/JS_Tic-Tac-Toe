@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic Tac Toe</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+      .container {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+      h1 {
+        font-size: 2rem;
+        color: #16213e;
+      }
+      #status {
+        font-size: 1.2rem;
+        color: #c73652;
+      }
+      table {
+        margin: 0 auto;
+        border-collapse: collapse;
+      }
+      td {
+        width: 100px;
+        height: 100px;
+        border: 3px solid #16213e;
+        font-size: 2.5rem;
+        font-weight: bold;
+        text-align: center;
+        vertical-align: middle;
+        cursor: pointer;
+        transition: background 0.2s;
+      }
+      td:hover {
+        background-color: #53d9fb5c;
+      }
+      .X {
+        color: #e94560;
+      }
+      .O {
+        color: #1a4a7a;
+      }
+      button {
+        padding: 10px 30px;
+        font-size: 1rem;
+        background: #e94560;
+        color: #fff;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+      button:hover {
+        background: #c73652;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Tic Tac Toe</h1>
+      <p id="status">X's Turn</p>
+      <div id="board"></div>
+      <button onclick="reset()">New Game</button>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
